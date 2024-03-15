@@ -53,8 +53,8 @@ fun TransitionAnimScreen() {
         Button(onClick = {
             coroutineScope.launch {
                 awaitAll(
-                    async { scale.animateTo(targetValue = if (scale.value == 0.5f) 0.2f else 0.5f, animationSpec = tween(durationMillis = 600)) },
-                    async { translationY.animateTo(targetValue = if (translationY.value == 1000f) -700f else 1000f, animationSpec = tween(durationMillis = 600)) }
+                    async { scale.animateTo(targetValue = if (scale.value == 0.5f) 0.2f else 0.5f, animationSpec = tween(durationMillis = 1000)) },
+                    async { translationY.animateTo(targetValue = if (translationY.value == 1000f) -700f else 1000f, animationSpec = tween(durationMillis = 1000)) }
                 )
 
             }

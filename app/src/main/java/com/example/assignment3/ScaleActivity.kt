@@ -52,7 +52,7 @@ fun ScaleAnimScreen() {
     {
         Button(onClick = {
             coroutineScope.launch {
-                scale.animateTo(targetValue = if (scale.value == 1f) 2f else 1f, animationSpec = tween(durationMillis = 600))
+                scale.animateTo(targetValue = if (scale.value == 1f) 2f else 1f, animationSpec = tween(durationMillis = 1000))
             }
         }, modifier = Modifier.scale(scale.value)) {
             Text("Click Me To Animate")
